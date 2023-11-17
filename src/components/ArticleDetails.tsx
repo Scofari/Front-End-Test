@@ -16,7 +16,6 @@ import {
 import { Loader } from "./";
 import { IArticleDetails } from "../models/news.interface";
 import { NEWS_MEDIA_URL, LOGO_MEDIA_URL, fallbackLogo } from "../constants";
-import { extractTextFromHTML } from "../utils/extractTextFromHtml";
 
 export default function ArticleDetails() {
     const { url } = useParams();
