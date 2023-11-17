@@ -1,38 +1,23 @@
-interface ContentTitle {
-    short: string;
-}
+type ContentTitle = "short";
 
-interface ContentDates {
-    posted: string;
-    postedTs: string;
-    postedWithYear: string;
-}
+type ContentDescription = "intro" | "long";
 
-interface ContentDescription {
-    intro: string;
-    long: string;
-}
+type ContentDates = "posted" | "postedTs" | "postedWithYear";
 
-interface Topic {
-    attachment: string;
-}
+type Topics = "id" | "attachment";
 
-interface Counters {
-    view: number;
-    comment: number;
-    like: number;
-}
+type Counters = "view" | "comment" | "like";
 
 export interface NewsItem {
     id: string;
     url: string;
     lang: string;
-    title: ContentTitle;
+    title: Record<ContentTitle, string>;
     thumbnail: string;
-    dates: ContentDates;
-    description: ContentDescription;
-    parents: Topic[];
-    counters: Counters;
+    dates: Record<ContentDates, string>;
+    description: Record<ContentDescription, string>;
+    parents: Record<Topics, string>[];
+    counters: Record<Counters, number>;
 }
 
 export interface ContentResponse {

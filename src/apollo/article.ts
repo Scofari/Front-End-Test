@@ -30,6 +30,7 @@ export const GET_ARTICLE = gql`
                 long
             }
             parents {
+                id
                 attachment
             }
             counters {

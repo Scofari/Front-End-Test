@@ -27,6 +27,7 @@ export const GET_NEWS_LIST = gql`
                 intro
             }
             parents {
+                id
                 attachment
             }
         }

@@ -68,7 +68,7 @@ export default function ArticleDetails() {
                 src={`${NEWS_MEDIA_URL}${thumbnail}`}
                 alt="point thumbnail"
             />
-            <p>{extractTextFromHTML(description.long)}</p>
+            <p dangerouslySetInnerHTML={{ __html: description.long }} />
         </ArticleContainer>
     );
 }
